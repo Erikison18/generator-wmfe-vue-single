@@ -1,0 +1,74 @@
+.aitectcare_home {
+	color: #fff;
+	text-align: center;
+	background: url("./images/bg@2x.png") no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	height: 100vh;
+	.body {
+		animation: translateY 0.5s linear;
+	}
+	.header-layout {
+		background: none;
+	}
+	.title{
+		font-size: 46px;
+		font-weight: bold;
+		padding-top: 74px;
+	}
+	.sub_title{
+		font-size: 32px;
+		padding: 24px 0 18px 0;
+	}
+	.anim{
+		position: relative;
+		.diqiu{
+			width: 750px;
+			height: 604px;
+			background: url(./images/diqiu@2x.png) no-repeat center center;
+			background-size: cover;
+			animation:rotate 10s linear infinite;
+		}
+		.ico{
+			width: 750px;
+			height: 604px;
+			position: absolute;
+			top: 0;
+			opacity: 0;
+		}
+		.s1{
+			background: url(./images/s1@2x.png) no-repeat center center;
+			background-size: cover;
+		}
+		.s2{
+			background: url(./images/s2@2x.png) no-repeat center center;
+			background-size: cover;
+		}
+		.s3{
+			background: url(./images/s3@2x.png) no-repeat center center;
+			background-size: cover;
+		}
+		.play{
+			animation: change 2s linear;
+		}
+	}
+}
+@keyframes rotate{
+	0%{
+		transform: rotate(0);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes change{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}

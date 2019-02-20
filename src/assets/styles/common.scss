@@ -1,0 +1,118 @@
+ 
+body {
+  font-family: "微软雅黑";
+  font-size: 0.14px;
+  position: relative;
+  z-index: 1;
+  color: #ebebeb;
+  // background: url("../images/bg.png") center bottom no-repeat;
+  // background-size: cover;
+  background: #000615;
+  &::before {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("../images/bg.png") center bottom no-repeat;
+    background-size: cover;
+  }  
+}
+#app {
+  width: 750px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  // min-height: 100vh;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+.post-fixed {
+  position: fixed;
+}
+.router_container {
+  padding-top: 100px;
+  float: left;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.top-classify {
+  float: left;
+  width: 100%;
+  text-align: center;
+  h2 {
+    margin: 50px 0 78px 0;
+  }
+  .menu {
+    float: left;
+    display: flex;
+    background: url("../images/border.png") no-repeat center bottom;
+    background-size: 100% 40px;
+    height: 165px;
+    width: 100%;
+    font-size: 26px;
+    li {
+      flex: 1;
+      &.active {
+        &::after {
+          content: "";
+          height: 40px;
+          width: 100%;
+          background: url("../images/light.png") center bottom no-repeat;
+          background-size: 100% 100%;
+          animation: translateX 0.5s linear;
+          display: inline-block;
+          margin-top: 15px;
+        }
+      }
+      &::before {
+        content: "";
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+@keyframes translateX {
+  0% {
+    transform:  translateX(-90%);
+  }
+  100% {
+    transform:  translateX(0);
+  }
+}
+
+@keyframes translateY {
+  0% {
+    transform:  translateY(-5%);
+    opacity: 0;
+  }
+  100% {
+    transform:  translateY(0);
+    opacity: 1;
+  }
+}
